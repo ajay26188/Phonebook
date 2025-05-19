@@ -61,6 +61,8 @@ const App = () => {
     }
   }
 
+  
+
   return (
     <div className="app-container">
       <Navbar />
@@ -68,9 +70,9 @@ const App = () => {
       
       <main className="main-content">
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home persons={persons} />} />
           <Route path="/add" element={<AddContact addNameNumber={addNameNumber} />} />
-          <Route path="/contacts" element={<AllContacts persons={persons} deletePerson={deletePerson} />} />
+          <Route path="/contacts" element={<AllContacts persons={persons} deletePerson={deletePerson}  />} />
           <Route path="/filter" element={<FilterPage persons={persons} deletePerson={deletePerson} />} />
           <Route path="/about" element={<About />} />
         </Routes>
